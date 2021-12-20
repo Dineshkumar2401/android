@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" ng-app="crudApp">
+<head>
+<title>AngularJS CRUD Operations Demo</title>
+<meta charset="utf-8">
+		<title>Tamil Web Fonts &real; beautifying the Tamil typography.</title>    
+		<link rel="stylesheet" href="type.css">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Tharique Azeez">
+        <link rel="shortcut icon" href="img/favicon.png"/>
+        <meta name="description" content="Tamil Web Fonts from Google - Adding beautiful to the Tamil typography.">
+        <meta name="Keywords" content="tamil, web fonts, webfonts, google fonts, tamil web fonts, tamil web font, tamil fonts, google tamil fonts, tamil unicode fonts, web unicode tamil fonts, tamil unicode fonts, fonts tamil, download tamil fonts, tamil fonts free">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- Include main CSS -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- Include jQuery library -->
+<script src="js/jQuery/jquery.min.js"></script>
+<!-- Include AngularJS library -->
+<script src="lib/angular/angular.min.js"></script>
+<!-- Include Bootstrap Javascript -->
+<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container wrapper" ng-controller="DbController">
+
+<div class="account-container">
+	
+	<div class="content clearfix">
+		
+		<form class="form-horizontal" method="POST" name="empList" id="empForm" ng-submit="loginDetails(user);">
+
+			<h1>Admin Login</h1>		
+			<div class="login-fields">
+				<p>Please provide your details</p>
+				<div class="field">
+					<label for="username">Email</label>
+					<input type="text" name="email" value="" placeholder="Email" class="login username-field" ng-model="user.email" 	validator="required,email" required-error-message="Email is required" email-error-message="Invalid email address" valid-method="watch"	/>
+				</div> <!-- /field -->
+				<div class="field">
+					<label for="password">Password:</label>
+					<input type="password" name="password" value="" placeholder="Password" class="login password-field" ng-model="user.password" validator="required" required-error-message="Password is required" valid-method="watch" />
+				</div> <!-- /password -->
+				
+			</div> <!-- /login-fields -->
+			
+			<div class="login-actions">
+				
+				<span class="login-checkbox">
+					<input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
+					<label class="choice" for="Field">Keep me signed in</label>
+				</span>
+					
+					
+				<div class="singin-btn"><button class="button btn btn-success btn-large" validation-submit="loginForm">Sign In</button></div>
+				
+			</div> <!-- .actions -->
+			
+			
+			
+		</form>
+		
+	</div> <!-- /content -->
+	
+</div> <!-- /account-container -->
+</div>
+
+
+<div class="login-extra">
+	<a href="javascript:;">Reset Password</a>
+</div> <!-- /login-extra -->
+</body>
+</html>

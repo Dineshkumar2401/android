@@ -1,0 +1,37 @@
+<form class="form-horizontal alert alert-warning" name="empList" id="empForm" ng-submit="insertActivities(empInfo);" hidden>
+<h3 class="text-center">Add New Complications List</h3>
+	<div id="complicationscontroller" ng-controller="ComplicationsController" style="display:none">
+	    <option value="0">--TO SELECT COMPLICATIONS--</option>
+		<option ng-repeat="detail in activities| filter:search_query" value="{{detail.id}}">{{detail.id}}-{{detail.complications}}</option>		
+	</div>
+	<div class="form-group">
+		<label for="Address">Select Complications Name:</label>
+		<select ng-model="empInfo.complications_id" id="complications_list">
+		</select>		
+	</div>
+	
+	<div class="form-group">
+		<label for="Address">Complications Topic:</label>
+	<input type="text" name="name" class="form-control" placeholder="Enter Details" ng-model="empInfo.name" autofocus required />
+	</div>
+
+	<div class="form-group">
+		<label for="Address">Complications Details:</label>
+		<textarea ng-model="empInfo.complications_details" id="editor"></textarea>
+		<script>
+         ClassicEditor
+			.create( document.querySelector( '#editor' ) )
+			.then( editor => {
+					console.log( editor );
+			} )
+			.catch( error => {
+					console.error( error );
+			} );
+
+		</script>		
+	</div>
+	<div class="form-group">
+		<button class="btn btn-warning">Save</button>
+	</div>
+</form>
+	

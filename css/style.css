@@ -1,0 +1,397 @@
+/* @import url(http://fonts.googleapis.com/css?family=Raleway); */
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanstamil.css); */
+
+@import url(http://fonts.googleapis.com/earlyaccess/karlatamilinclined.css);
+@import url(http://fonts.googleapis.com/earlyaccess/lohittamil.css);
+@import url(http://fonts.googleapis.com/earlyaccess/karlatamilupright.css);
+@import url(http://fonts.googleapis.com/earlyaccess/droidsanstamil.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstamil.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstamilui.css); 
+
+/*body#login{ background: url(../images/footer-bg.jpg); color:#838383; font: 13px/1.7em 'Open Sans';}*/
+
+.header-logo {
+/* background: url(../images/header-logoss.png) no-repeat 0 0; */
+width: 60%;
+height: 100px;
+text-align: center;
+margin: 25px auto;
+}
+p{
+font-family: Lohit Tamil;
+}
+.karla p,p{
+    font-family: Karla Tamil Inclined, serif;
+}
+
+.karla-right p,p{
+    font-family: Karla Tamil Upright, serif;
+}
+
+.lohit p,p{
+    font-family: Lohit Tamil, serif;
+    font-size: 17px;
+}
+
+.noto-ui p,p{
+    font-family: Noto Sans Tamil UI, serif;
+}
+
+.droid-sans p{
+    font-family: Droid Sans Tamil, serif;
+}
+
+.wrapper {
+	min-height: auto;
+}
+form#empForm, form#editForm {
+padding: 0 35px 15px;
+}
+label.gender {
+padding-top: 0 !important;
+}
+table tr th{
+    background: #f8f8f8;
+}
+.search-box {
+    padding-bottom: 0;
+}
+@media screen and (max-width: 368px){
+.wrapper{
+    min-width: 340px;
+}   
+}
+
+.account-container {
+    width: 527px;
+    display: block;
+    margin: 0px auto 0 auto;
+    background: #040404e8;
+    border: 1px solid #000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: unset;
+}
+
+.content {
+	padding: 16px 28px 23px;
+} 
+
+.login-fields {
+	
+}
+
+.login-fields .field {
+	margin-bottom: 1.25em;
+}
+
+.login-fields label {
+	display: none;
+}
+
+.login-fields input {
+    font-family: 'Open Sans';
+    font-size: 17px;
+    color: #8e8d8d;
+    padding: 11px 15px 10px 50px;
+    background-color: #fdfdfd;
+    width: 255px;
+    display: block;
+    margin: 0;
+    height: 40px;
+	border: 1px solid #e3e3e3;
+}
+
+.username-field { background: url(../images/signin/user.png) no-repeat; }
+
+.password-field { background: url(../images/signin/password.png) no-repeat; }
+
+
+
+
+.login-actions {
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 1.25em;
+}
+
+.login-social {
+	float: left;
+	
+	padding: 10px 0 15px;
+	
+	border: 1px dotted #CCC;
+	border-right: none;
+	border-left: none;	
+}
+
+.singin-btn{
+	padding-top:10px;
+	text-align:center;
+}
+span.login-checkbox > input[type='checkbox'] {
+     margin: 1px 0 0;
+    float: left;
+    width: 15px;
+}
+
+span.login-checkbox > input[type='checkbox'] + label {    
+    clear: none;
+    height: 15px; 
+	display: block;
+    padding: 0 0 0 22px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.2em;
+   background: url(../images/signin/check.png) no-repeat 0 0;
+   cursor: pointer;
+}
+
+span.login-checkbox > input[type='checkbox']:checked + label {	
+	background-position: 0 -15px;
+}
+
+/** Text Under Box**/
+.login-extra {
+	display: block; 
+	width: 300px; 
+	margin: 1.5em auto;
+	 
+	text-align: left;
+	line-height: 19px; 
+	
+	text-shadow: 1px 1px 0px #fff; 	
+}
+
+
+.account-container h1 {
+    margin-bottom: .4em;
+    color: #ff1a6f;
+}
+@media (max-width: 480px) {
+	
+	.account-container {
+		width: 280px;	
+		margin-top: 35px;
+	}
+	
+	.login-fields input {
+		width: 160px;
+	}
+	
+	.login-social {
+		width: 100%;
+	}
+	
+	.twitter {
+		display: block;
+		margin-bottom: 1em;
+	}
+	
+	.register .login-fields input {
+		width: 204px;
+		padding-left: 6px;
+	}
+	
+}
+.form-group {
+	width: 40%;
+
+}
+.container.wrapper  .wrapper {
+    position: relative;
+    top: 0;
+    height: auto;
+    width: 100%;
+}
+.container.wrapper .wrapper .sidebar {
+	background: #1b1e24;
+	width: 17%;
+}
+.sidebar .sidebar-wrapper{
+	background: #1b1e24;
+}
+.container.wrapper .wrapper .main-panel {
+    width: 83%;
+    padding: 50px;
+}
+.container.wrapper .wrapper .sidebar .nav li > a {
+	padding: 14px 13px;
+	margin: 21px 19px;
+}
+.container.wrapper .wrapper .sidebar .nav li.active > a {
+	background-color: #01a1ab;
+}
+.profile-data-name {
+	text-align: center;
+	font-size: 17px;
+}
+.profile {
+	text-align: center;
+}
+.profile-image {
+	padding: 20px;
+}
+#compl_Details {
+	float: right;
+}
+form .text-center {
+	text-align: left;
+	color: #777;
+	font-size: 21px;
+	margin-left: 8%;
+	margin-bottom: 26px;
+}
+.container-fluid .form-horizontal .form-group {
+	margin-left: 8%;
+}
+label {
+	color: #777;
+}
+.logo, .logo-description {
+    text-align: center;
+    font-size: 26px;
+    margin: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+#login .logo {
+    margin-top: 8%;
+    font-size: 54px;
+}
+body#login {
+    background: url(../images/background.jpg);
+	    background-size: cover;
+}
+.account-container {
+    margin-top: 12%;
+}
+.login-fields p {
+    color: #fff;
+}
+.login-fields input {
+    width: 403px;
+}
+p.copyright.pull-center {
+    color: #fff;
+}
+p.copyright.pull-center, p.copyright.pull-center a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: unset;
+}
+.container.wrapper {
+    height: auto;
+    padding: 0;
+}
+.ng-scope .footer {
+    background-color: #01a1ab;
+    line-height: 5px;
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+}
+body#login footer.footer {
+    background-color: unset;
+}
+.login-extra {
+    width: 512px;
+}
+.login-extra.ng-scope a {
+    color: #fff;
+    font-weight: normal;
+    text-shadow: none;
+}
+html body, html .wrapper {
+    min-height: 93vh;
+}
+.container.wrapper .wrapper .main-panel .content {
+    padding-top: 25px;
+}
+li.logout a {
+    background: #f50000;
+    border-radius: 8px;
+}
+li.logout p {
+    color: #fff;
+}
+body li.logout a:hover {
+    background-color: #000000fa !important;
+}
+#add {
+    background: #01a1ab;
+    border-bottom: #01a1ab;
+    opacity: 1;
+    color: #fff;
+    border: 0;
+    padding: 12px;
+}
+#add span {
+    padding-left: 20px;
+}
+.container.wrapper .wrapper .sidebar .nav li > a {
+    background: rgba(255, 255, 255, 0.13);
+} 
+#add:hover {
+    background: #383b40;
+    border-bottom: #383b40;
+}
+div#title a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 30px;
+}
+.form-group .btn-warning {
+    border-color: #135e05;
+    color: #135e05;
+    background: #135e05;
+    color: #fff;
+}
+form#empForm, form#editForm {
+    padding: 0 35px 15px;
+    background: #f5f5f6;
+}
+.form-group {
+    width: 70%;
+}
+form h3.text-center {
+    text-align: center;
+}
+.account-container form#empForm {
+    background: transparent;
+}
+.container-fluid .table-responsive {
+    overflow-y: scroll;
+    height: 400px;
+}
+#login .container.wrapper .wrapper, html #login .wrapper {
+    height: auto !important;
+    min-height: auto;
+}
+input#but_upload ,#remove_upload{
+    width: 200px;
+    color: #fff;
+    background: #01a1ab;
+    border: 0;
+    border-radius: 20px;
+    height: 33px;
+}
+.holder ,#preview_display{
+    width: 200px;
+    height: 100px;
+    display: inline-table;
+    padding: 20px;
+    background: #ddd9d9;
+    margin-top: 20px;
+}
+td#display-image {
+    width: 50px;
+    height: 50px;
+}
+td#display-image img {
+    width: 100%;
+}

@@ -1,0 +1,49 @@
+<form class="form-horizontal alert alert-warning panel panel-default" name="empList" id="empForm" ng-submit="insertActivities(empInfo);" hidden>
+<h3 class="text-center">Add New Complications List</h3>
+	<div class="form-group">
+		<label for="Address">Complications Name:</label>
+		<input type="text" name="complications" class="form-control" placeholder="Enter Details" ng-model="empInfo.complications" autofocus required />	<br/>
+		<input type="file" id="file" name="file" /><br/>
+        <input type="button" class="button" value="Upload" id="but_upload">	<br/>
+		 <div class="holder" style="display:none;">
+                <img id="output"/ style="width:100%;">
+          </div>
+		<input id="file_name" type="hidden" name="photo" value="" ng-model="empInfo.photo"/>		
+	</div>
+	<div class="form-group">
+		<button class="btn btn-warning">Save</button>
+	</div>
+</form>
+
+<script type="text/javascript">
+        $(document).ready(function() {
+            $("#but_upload").click(function() {
+                var fd = new FormData();
+                var files = $('#file')[0].files[0];
+				$('.holder').css('display','inline-table');
+				var output = document.getElementById('output');
+				output.src = URL.createObjectURL(files);
+				output.onload = function() {
+				  URL.revokeObjectURL(output.src) // free memory
+				}
+				$('#file_name').val(files['name']);
+                fd.append('file', files);
+       
+                $.ajax({
+                    url: '../../upload.php',
+                    type: 'post',
+                    data: fd,
+                    contentType: false,
+                    processData: false,
+                    success: function(response){
+                        if(response != 0){
+                           console.log('file uploaded');
+                        }
+                        else{
+                            console.log('file not uploaded');
+                        }
+                    },
+                });
+            });
+        });
+    </script>

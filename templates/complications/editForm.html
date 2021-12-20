@@ -1,0 +1,59 @@
+<!-- Form used for updation of data into database -->
+<form class="form-horizontal alert alert-warning panel panel-default" id="editForm" ng-submit="UpdateActivities(currentUser)" hidden>
+<h3 class="text-center">Update Complications Details</h3>
+	<div class="form-group">
+		<label for="complications">Complications:</label>
+		<input type="text" class="form-control" ng-model="currentUser.complications" value="{{currentUser.complications}}"><br/>
+		<div id="preview_display"><img  src="../../upload/{{currentUser.image}}" style="width:100%;"><input type="button" class="button" value="Remove" id="remove_upload">	<br/></div>
+		<div id="updated" style="display:none;">
+		<input type="file" id="files" name="files" /><br/>
+        <input type="button" class="button" value="Upload" id="but_uploads">	<br/>
+		 <div class="holder" style="display:none;">
+                <img id="outputs"/ style="width:100%;">
+          </div>
+		<input id="file_names" type="hidden" name="photo" value="" ng-model="currentUser.photo"/>	
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<button class="btn btn-warning"  ng-click="updateMsg(currentUser.id)">Update</button>
+	</div>
+</form>
+<script type="text/javascript">
+        $(document).ready(function() {
+			
+			$("#but_uploads").click(function() {
+                var fd = new FormData();
+                var files = $('#files')[0].files[0];
+				$('.holder').css('display','inline-table');
+				var output = document.getElementById('outputs');
+				output.src = URL.createObjectURL(files);
+				output.onload = function() {
+				  URL.revokeObjectURL(output.src) // free memory
+				}
+				$('#file_names').val(files['name']);
+                fd.append('files', files);
+       
+                $.ajax({
+                    url: '../../upload.php',
+                    type: 'post',
+                    data: fd,
+                    contentType: false,
+                    processData: false,
+                    success: function(response){
+                        if(response != 0){
+                           console.log('file uploaded');
+                        }
+                        else{
+                            console.log('file not uploaded');
+                        }
+                    },
+                });
+            });
+			
+			$("#remove_upload").click(function() {
+				$('#preview_display').hide();
+				$('#updated').css('display','block');
+			});
+        });
+    </script>

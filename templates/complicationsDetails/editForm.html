@@ -1,0 +1,31 @@
+<!-- Form used for updation of data into database -->
+<form class="form-horizontal alert alert-warning" id="editForm" ng-submit="UpdateActivities(currentUser)" hidden>
+<h3 class="text-center">Update Complications Details</h3>
+	<div class="form-group">
+		<label for="complications">Select Complications Name:</label>
+		<input type="text" class="form-control" ng-model="currentUser.complications_id" value="{{currentUser.complications_id}}" readonly>
+	</div>
+	<div class="form-group">
+		<label for="complications">Complications Topic:</label>
+		<input type="text" class="form-control" ng-model="currentUser.name" value="{{currentUser.name}}">
+	</div>
+	<div class="form-group">
+		<label for="complications">Complications Details:</label>
+		<input id="text_edit" type="hidden" value="{{currentUser.complications_details}}">
+		<textarea  id="editor1"></textarea>	
+		<script>
+		
+         ClassicEditor
+			.create( document.querySelector( '#editor1' ) )
+			.then( editor => {
+					console.log( editor );
+			} )
+			.catch( error => {
+					console.error( error );
+			} );
+		</script>
+	</div>
+	<div class="form-group">
+		<button class="btn btn-warning"  ng-click="updateMsg(currentUser.id)">Update</button>
+	</div>
+</form>
